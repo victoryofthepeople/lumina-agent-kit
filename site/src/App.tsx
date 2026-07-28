@@ -40,6 +40,14 @@ const TEACHING: Record<string, string> = {
   dump: "Your brain dump lands in today's daily log. Your AI organizes it from there. You never have to open a file.",
 };
 
+function BrandMark() {
+  return (
+    <a className="brand" href="https://nicosullivan.com" target="_blank" rel="noreferrer" aria-label="Nico Sullivan — nicosullivan.com">
+      <span className="brand-mark" aria-hidden="true" />
+    </a>
+  );
+}
+
 function CheckIcon() {
   return (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -116,6 +124,8 @@ export default function App() {
 
   return (
     <div className="app">
+      <BrandMark />
+
       {phase !== "intro" && (
         <header className="topbar">
           <div className="progress" role="progressbar" aria-valuenow={progress} aria-valuemin={0} aria-valuemax={100} aria-label="Setup progress">

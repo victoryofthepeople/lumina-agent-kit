@@ -72,6 +72,41 @@ body {
   overflow: hidden;
 }
 
+/* ---------- brand mark ---------- */
+.brand {
+  position: fixed;
+  top: 16px;
+  left: 20px;
+  z-index: 40;
+  display: inline-flex;
+  padding: 4px;
+  border-radius: 8px;
+  opacity: 0.72;
+  transition: opacity 220ms ease-out;
+}
+
+.brand:hover,
+.brand:focus-visible {
+  opacity: 1;
+}
+
+.brand-mark {
+  display: block;
+  width: 30px;
+  height: 30px;
+  background: var(--text);
+  mask-image: url(/ns-logo-mask.png);
+  mask-mode: luminance;
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  -webkit-mask-image: url(/ns-logo-mask.png);
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  transition: background 220ms ease-out;
+}
+
 /* ---------- top bar ---------- */
 .topbar {
   display: flex;
